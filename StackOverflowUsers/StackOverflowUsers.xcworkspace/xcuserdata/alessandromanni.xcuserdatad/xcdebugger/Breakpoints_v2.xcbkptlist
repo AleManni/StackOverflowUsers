@@ -7,49 +7,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "12D8DE10-56A3-4973-BAE4-1CA7A0018339"
-            shouldBeEnabled = "Yes"
+            uuid = "CFBFB12E-C620-4791-BD5B-3C66E1E2EDB5"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StackOverflowUsers/MainFlow/UsersLists/Views/UsersListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "viewWillAppear(_:)"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "displayUsersList(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9CA8E8F0-A29E-4A3F-BA29-FEF9C1410E8B"
+            uuid = "4FA2C6E3-8EEC-4AA5-9874-C02C538D0A8F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "StackOverflowUsers/MainFlow/MainFlowCoordinator.swift"
+            filePath = "../Modules/SharedComponents/Sources/UIElements/BaseTableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "start()"
-            landmarkType = "7">
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "requiresPlaceholder"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "706408AE-82E7-4AB8-B456-9EB52193A409"
+            uuid = "9FD6F0DC-F7FD-49EB-8BE8-9E20529B97A6"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "StackOverflowUsers/MainFlow/MainFlowCoordinator.swift"
+            filePath = "../Modules/SharedComponents/Sources/UIElements/BaseTableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "start()"
-            landmarkType = "7">
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "requiresPlaceholder"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

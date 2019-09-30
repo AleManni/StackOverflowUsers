@@ -22,7 +22,7 @@ extension UserCellViewModel {
   
   init(with domainModel: User) {
     self.mainImageURL = domainModel.imageURL
-    self.icon = "❤️"
+    self.icon = domainModel.isFollowed ? "❤️" : ""
     self.primaryLabelText = domainModel.name
     self.secondaryLabelText = String(domainModel.reputation)
     self.primaryButtonTitle = domainModel.isFollowed ? NSLocalizedString("Unfollow", comment: "") : NSLocalizedString("Follow", comment: "")

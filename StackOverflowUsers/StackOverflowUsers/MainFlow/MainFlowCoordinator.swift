@@ -21,28 +21,12 @@ final class MainFlowCoordinator: FlowCoordinator {
     return UINavigationController(nibName: nil, bundle: nil)
   }()
 
-  lazy var window: UIWindow = {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate // swiftlint:disable:this force_cast
-
-    if let window = appDelegate.window {
-      return window
-    } else {
-      let window = UIWindow(frame: UIScreen.main.bounds)
-
-      appDelegate.window = window
-      appDelegate.window?.makeKeyAndVisible()
-
-      return window
-    }
-  }()
-
   // MARK: Initialisation
   init(viewControllersFactory: ViewControllersFactory) {
     self.factory = viewControllersFactory
   }
 
   func start() {
-    window.rootViewController = navigationController
     showUsersList()
   }
 }

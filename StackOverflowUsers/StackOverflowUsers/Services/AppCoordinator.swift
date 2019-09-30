@@ -8,11 +8,7 @@
 
 import SharedComponents
 
-/**
- `DefaultAppCoordinatorService` is an app service that initialises and manages the flow coordinators within the app.
- */
-final class AppCoordinatorService: AppService {
-    
+final class AppCoordinator {
     
     private var repositories: AppRepositories {
       #if TESTING
@@ -25,12 +21,4 @@ final class AppCoordinatorService: AppService {
     lazy var mainFlowCoordinator: FlowCoordinator? = {
       return MainFlowCoordinator(viewControllersFactory: ViewControllersFactory(repositories: repositories))
     }()
-}
-
-extension AppCoordinatorService: ApplicationService {
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool  {
-    mainFlowCoordinator?.start()
-    return true
-  }
 }

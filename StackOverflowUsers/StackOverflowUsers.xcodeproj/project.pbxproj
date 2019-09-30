@@ -13,7 +13,7 @@
 		2AD366C42341056D001B1D7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD366C32341056D001B1D7F /* Preview Assets.xcassets */; };
 		2AD366C72341056D001B1D7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD366C52341056D001B1D7F /* LaunchScreen.storyboard */; };
 		2AD366D22341056E001B1D7F /* FollowedUsersDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD366D12341056E001B1D7F /* FollowedUsersDatabaseTests.swift */; };
-		2AD366DE23411465001B1D7F /* AppCoordinatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD366DD23411465001B1D7F /* AppCoordinatorService.swift */; };
+		2AD366DE23411465001B1D7F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD366DD23411465001B1D7F /* AppCoordinator.swift */; };
 		2AD366E023411721001B1D7F /* AppearanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD366DF23411721001B1D7F /* AppearanceService.swift */; };
 		2AD366E3234118DD001B1D7F /* AppRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD366E2234118DD001B1D7F /* AppRepositories.swift */; };
 		2AD366E523411A94001B1D7F /* UserReporitoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD366E423411A94001B1D7F /* UserReporitoryProtocol.swift */; };
@@ -41,6 +41,7 @@
 		2AFA36472342543100FD2D4A /* UsersListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA36462342543100FD2D4A /* UsersListTableView.swift */; };
 		2AFA3649234258D700FD2D4A /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA3648234258D700FD2D4A /* UsersListViewController.swift */; };
 		2AFA364C23425B0000FD2D4A /* UsersListTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA364B23425B0000FD2D4A /* UsersListTableViewModel.swift */; };
+		2AFA369D234286B500FD2D4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA369C234286B400FD2D4A /* SceneDelegate.swift */; };
 		D2BF0FF95017D32FA85596DB /* Pods_StackOverflowUsersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E8E97592A6AE288F0E002AB /* Pods_StackOverflowUsersTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +67,7 @@
 		2AD366CD2341056E001B1D7F /* StackOverflowUsersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackOverflowUsersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD366D12341056E001B1D7F /* FollowedUsersDatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedUsersDatabaseTests.swift; sourceTree = "<group>"; };
 		2AD366D32341056E001B1D7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2AD366DD23411465001B1D7F /* AppCoordinatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorService.swift; sourceTree = "<group>"; };
+		2AD366DD23411465001B1D7F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		2AD366DF23411721001B1D7F /* AppearanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceService.swift; sourceTree = "<group>"; };
 		2AD366E2234118DD001B1D7F /* AppRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepositories.swift; sourceTree = "<group>"; };
 		2AD366E423411A94001B1D7F /* UserReporitoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReporitoryProtocol.swift; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 		2AFA36462342543100FD2D4A /* UsersListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListTableView.swift; sourceTree = "<group>"; };
 		2AFA3648234258D700FD2D4A /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
 		2AFA364B23425B0000FD2D4A /* UsersListTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListTableViewModel.swift; sourceTree = "<group>"; };
+		2AFA369C234286B400FD2D4A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4E8E97592A6AE288F0E002AB /* Pods_StackOverflowUsersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackOverflowUsersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A57B5ECA4997E2D46D233A /* Pods-StackOverflowUsersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowUsersTests.release.xcconfig"; path = "Target Support Files/Pods-StackOverflowUsersTests/Pods-StackOverflowUsersTests.release.xcconfig"; sourceTree = "<group>"; };
 		EA86F175361D00B96C94846B /* Pods-StackOverflowUsers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowUsers.debug.xcconfig"; path = "Target Support Files/Pods-StackOverflowUsers/Pods-StackOverflowUsers.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				2AD366DC2341145B001B1D7F /* Services */,
 				2AD366F323413942001B1D7F /* MainFlow */,
 				2AD366BA2341056C001B1D7F /* AppDelegate.swift */,
+				2AFA369C234286B400FD2D4A /* SceneDelegate.swift */,
 				2AD366C02341056D001B1D7F /* Assets.xcassets */,
 				2AD366C52341056D001B1D7F /* LaunchScreen.storyboard */,
 				2AD366C82341056D001B1D7F /* Info.plist */,
@@ -177,7 +180,7 @@
 		2AD366DC2341145B001B1D7F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				2AD366DD23411465001B1D7F /* AppCoordinatorService.swift */,
+				2AD366DD23411465001B1D7F /* AppCoordinator.swift */,
 				2AD366DF23411721001B1D7F /* AppearanceService.swift */,
 			);
 			path = Services;
@@ -513,8 +516,9 @@
 				2AFA36452342505100FD2D4A /* UsersListViewModel.swift in Sources */,
 				2AD366E823411CE1001B1D7F /* User.swift in Sources */,
 				2AD366ED23411E60001B1D7F /* FollowedUsersDatabase.swift in Sources */,
-				2AD366DE23411465001B1D7F /* AppCoordinatorService.swift in Sources */,
+				2AD366DE23411465001B1D7F /* AppCoordinator.swift in Sources */,
 				2AD366E523411A94001B1D7F /* UserReporitoryProtocol.swift in Sources */,
+				2AFA369D234286B500FD2D4A /* SceneDelegate.swift in Sources */,
 				2AD366E3234118DD001B1D7F /* AppRepositories.swift in Sources */,
 				2AD366F7234139BF001B1D7F /* ViewControllersFactory.swift in Sources */,
 				2AD366F523413966001B1D7F /* MainFlowCoordinator.swift in Sources */,

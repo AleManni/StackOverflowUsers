@@ -44,7 +44,7 @@ final class UsersListTableView: BaseTableView {
 extension UsersListTableView: UITableViewDataSource {
   
   func numberOfSections(in tableView: UITableView) -> Int {
-    return 0
+    return 1
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,7 +68,8 @@ extension UsersListTableView: UITableViewDelegate {
     deselectRow(at: indexPath, animated: true)
     if let cell = cellForRow(at: indexPath) as? UserCell {
       cell.didTouch()
-      // add start finish animation
+      tableView.beginUpdates()
+      tableView.endUpdates()
     }
   }
 }

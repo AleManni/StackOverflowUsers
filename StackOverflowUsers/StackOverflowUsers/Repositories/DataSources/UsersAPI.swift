@@ -35,7 +35,7 @@ final class UsersAPI: UsersAPIProtocol, API {
   
   func getUsers(completion: @escaping (OperationResult<UsersListNetworkModel>) -> Void) {
     
-    let request = APIRequestBuilder(base: "http://api.stackexchange.com",
+    let request = APIRequestBuilder(base: "api.stackexchange.com",
                                     endpoint: EndPoints.users.rawValue,
                                     parameters: [
                                       (.custom("pagesize"), ["20"]),

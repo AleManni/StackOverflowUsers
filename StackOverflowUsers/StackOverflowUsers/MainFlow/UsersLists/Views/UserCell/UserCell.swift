@@ -23,7 +23,7 @@ final class  UserCell: UITableViewCell {
   @IBOutlet weak var secondaryLabel: UILabel!
   @IBOutlet weak var primaryButton: UIButton!
   @IBOutlet weak var secondaryButton: UIButton!
-  @IBOutlet weak var disclosableStackView: UIStackView!
+  @IBOutlet weak var disclosableView: UIView!
   static let identifier = "userCellIdentifier"
 
 //private var itemId: String?
@@ -32,7 +32,7 @@ final class  UserCell: UITableViewCell {
   
   private var isOpen: Bool = false {
     didSet {
-      disclosableStackView.isHidden = !isOpen
+      disclosableView.isHidden = !isOpen
     }
   }
   
@@ -40,7 +40,7 @@ final class  UserCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     formatViews()
-    disclosableStackView.isHidden = true
+    disclosableView.isHidden = true
   }
   
   private func formatViews() {

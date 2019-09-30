@@ -52,15 +52,16 @@ final class UsersListViewController: UIViewController {
       tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       tableView.topAnchor.constraint(equalTo: errorBanner.bottomAnchor),
-      tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
+      tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+    ])
     
     errorBannerTopConstraint = errorBanner.topAnchor.constraint(equalTo: view.topAnchor)
     errorBannerTopConstraint?.constant = errorBannerOffset ?? -errorBannerHeight
     errorBannerTopConstraint?.isActive = true
   }
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
     presenter?.presentData()
   }
   
