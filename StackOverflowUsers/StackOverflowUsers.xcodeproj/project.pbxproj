@@ -31,6 +31,16 @@
 		2AD3670B23417B8A001B1D7F /* UserNetworkModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3670A23417B8A001B1D7F /* UserNetworkModelTest.swift */; };
 		2AFA362F2341F4FD00FD2D4A /* UsersRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA362E2341F4FD00FD2D4A /* UsersRepositoryTests.swift */; };
 		2AFA36312341FDD000FD2D4A /* UserDomainModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA36302341FDD000FD2D4A /* UserDomainModelTest.swift */; };
+		2AFA363423420AE600FD2D4A /* UsersListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA363323420AE600FD2D4A /* UsersListProtocols.swift */; };
+		2AFA363823420DC900FD2D4A /* UsersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA363723420DC900FD2D4A /* UsersListInteractor.swift */; };
+		2AFA363A23420F0600FD2D4A /* UsersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA363923420F0600FD2D4A /* UsersListPresenter.swift */; };
+		2AFA363F23421BAF00FD2D4A /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AFA363E23421BAF00FD2D4A /* UserCell.xib */; };
+		2AFA36412342217F00FD2D4A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA36402342217F00FD2D4A /* UserCell.swift */; };
+		2AFA36432342244A00FD2D4A /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA36422342244A00FD2D4A /* UserCellViewModel.swift */; };
+		2AFA36452342505100FD2D4A /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA363523420D0800FD2D4A /* UsersListViewModel.swift */; };
+		2AFA36472342543100FD2D4A /* UsersListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA36462342543100FD2D4A /* UsersListTableView.swift */; };
+		2AFA3649234258D700FD2D4A /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA3648234258D700FD2D4A /* UsersListViewController.swift */; };
+		2AFA364C23425B0000FD2D4A /* UsersListTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA364B23425B0000FD2D4A /* UsersListTableViewModel.swift */; };
 		D2BF0FF95017D32FA85596DB /* Pods_StackOverflowUsersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E8E97592A6AE288F0E002AB /* Pods_StackOverflowUsersTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +84,16 @@
 		2AD3670A23417B8A001B1D7F /* UserNetworkModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkModelTest.swift; sourceTree = "<group>"; };
 		2AFA362E2341F4FD00FD2D4A /* UsersRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepositoryTests.swift; sourceTree = "<group>"; };
 		2AFA36302341FDD000FD2D4A /* UserDomainModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDomainModelTest.swift; sourceTree = "<group>"; };
+		2AFA363323420AE600FD2D4A /* UsersListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListProtocols.swift; sourceTree = "<group>"; };
+		2AFA363523420D0800FD2D4A /* UsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
+		2AFA363723420DC900FD2D4A /* UsersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListInteractor.swift; sourceTree = "<group>"; };
+		2AFA363923420F0600FD2D4A /* UsersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListPresenter.swift; sourceTree = "<group>"; };
+		2AFA363E23421BAF00FD2D4A /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		2AFA36402342217F00FD2D4A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		2AFA36422342244A00FD2D4A /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
+		2AFA36462342543100FD2D4A /* UsersListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListTableView.swift; sourceTree = "<group>"; };
+		2AFA3648234258D700FD2D4A /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
+		2AFA364B23425B0000FD2D4A /* UsersListTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListTableViewModel.swift; sourceTree = "<group>"; };
 		4E8E97592A6AE288F0E002AB /* Pods_StackOverflowUsersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackOverflowUsersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A57B5ECA4997E2D46D233A /* Pods-StackOverflowUsersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowUsersTests.release.xcconfig"; path = "Target Support Files/Pods-StackOverflowUsersTests/Pods-StackOverflowUsersTests.release.xcconfig"; sourceTree = "<group>"; };
 		EA86F175361D00B96C94846B /* Pods-StackOverflowUsers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowUsers.debug.xcconfig"; path = "Target Support Files/Pods-StackOverflowUsers/Pods-StackOverflowUsers.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +227,7 @@
 			children = (
 				2AD366F423413966001B1D7F /* MainFlowCoordinator.swift */,
 				2AD366F6234139BF001B1D7F /* ViewControllersFactory.swift */,
+				2AFA363223420A5500FD2D4A /* UsersLists */,
 			);
 			path = MainFlow;
 			sourceTree = "<group>";
@@ -237,6 +258,47 @@
 				2AFA36302341FDD000FD2D4A /* UserDomainModelTest.swift */,
 			);
 			path = RepositoryTests;
+			sourceTree = "<group>";
+		};
+		2AFA363223420A5500FD2D4A /* UsersLists */ = {
+			isa = PBXGroup;
+			children = (
+				2AFA363323420AE600FD2D4A /* UsersListProtocols.swift */,
+				2AFA363723420DC900FD2D4A /* UsersListInteractor.swift */,
+				2AFA363923420F0600FD2D4A /* UsersListPresenter.swift */,
+				2AFA363D23421B8800FD2D4A /* Views */,
+			);
+			path = UsersLists;
+			sourceTree = "<group>";
+		};
+		2AFA363D23421B8800FD2D4A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2AFA364A2342592600FD2D4A /* UserCell */,
+				2AFA364D23425B3400FD2D4A /* UsersTableView */,
+				2AFA363523420D0800FD2D4A /* UsersListViewModel.swift */,
+				2AFA3648234258D700FD2D4A /* UsersListViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2AFA364A2342592600FD2D4A /* UserCell */ = {
+			isa = PBXGroup;
+			children = (
+				2AFA363E23421BAF00FD2D4A /* UserCell.xib */,
+				2AFA36402342217F00FD2D4A /* UserCell.swift */,
+				2AFA36422342244A00FD2D4A /* UserCellViewModel.swift */,
+			);
+			path = UserCell;
+			sourceTree = "<group>";
+		};
+		2AFA364D23425B3400FD2D4A /* UsersTableView */ = {
+			isa = PBXGroup;
+			children = (
+				2AFA36462342543100FD2D4A /* UsersListTableView.swift */,
+				2AFA364B23425B0000FD2D4A /* UsersListTableViewModel.swift */,
+			);
+			path = UsersTableView;
 			sourceTree = "<group>";
 		};
 		B90A2960C02AC2AE4A686644 /* Pods */ = {
@@ -344,6 +406,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AFA363F23421BAF00FD2D4A /* UserCell.xib in Resources */,
 				2AD366C72341056D001B1D7F /* LaunchScreen.storyboard in Resources */,
 				2AD366C42341056D001B1D7F /* Preview Assets.xcassets in Resources */,
 				2AD366C12341056D001B1D7F /* Assets.xcassets in Resources */,
@@ -446,6 +509,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AFA36432342244A00FD2D4A /* UserCellViewModel.swift in Sources */,
+				2AFA36452342505100FD2D4A /* UsersListViewModel.swift in Sources */,
 				2AD366E823411CE1001B1D7F /* User.swift in Sources */,
 				2AD366ED23411E60001B1D7F /* FollowedUsersDatabase.swift in Sources */,
 				2AD366DE23411465001B1D7F /* AppCoordinatorService.swift in Sources */,
@@ -453,11 +518,18 @@
 				2AD366E3234118DD001B1D7F /* AppRepositories.swift in Sources */,
 				2AD366F7234139BF001B1D7F /* ViewControllersFactory.swift in Sources */,
 				2AD366F523413966001B1D7F /* MainFlowCoordinator.swift in Sources */,
+				2AFA363A23420F0600FD2D4A /* UsersListPresenter.swift in Sources */,
 				2AD366FB23414105001B1D7F /* UsersListNetworkModel.swift in Sources */,
+				2AFA363423420AE600FD2D4A /* UsersListProtocols.swift in Sources */,
+				2AFA36472342543100FD2D4A /* UsersListTableView.swift in Sources */,
 				2AD366E023411721001B1D7F /* AppearanceService.swift in Sources */,
+				2AFA364C23425B0000FD2D4A /* UsersListTableViewModel.swift in Sources */,
 				2AD366BB2341056C001B1D7F /* AppDelegate.swift in Sources */,
 				2AD366EB23411E2C001B1D7F /* UsersAPI.swift in Sources */,
 				2AD366F223413580001B1D7F /* UsersRepository.swift in Sources */,
+				2AFA3649234258D700FD2D4A /* UsersListViewController.swift in Sources */,
+				2AFA36412342217F00FD2D4A /* UserCell.swift in Sources */,
+				2AFA363823420DC900FD2D4A /* UsersListInteractor.swift in Sources */,
 				2AD366EF23411E6F001B1D7F /* BlockedUsersDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

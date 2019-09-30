@@ -13,7 +13,7 @@ import SharedComponents
  */
 final class AppearanceService: AppService, ApplicationService {
     
-    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
     setupNavigationBar()
     application.statusBarStyle = .lightContent
     return true

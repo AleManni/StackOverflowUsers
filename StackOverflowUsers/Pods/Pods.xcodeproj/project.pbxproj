@@ -18,6 +18,7 @@
 		2AD3670223416D84001B1D7F /* APIMockNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD366FF23416D5F001B1D7F /* APIMockNetworkClient.swift */; };
 		2AD3670423416DBD001B1D7F /* TestUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3670323416DBD001B1D7F /* TestUtilities.swift */; };
 		2AD367082341742D001B1D7F /* NetworkMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD367072341742D001B1D7F /* NetworkMocks.swift */; };
+		2AFA363C2342152500FD2D4A /* PlaceholderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA363B2342152500FD2D4A /* PlaceholderViewModel.swift */; };
 		2D1A12D1818FECCD40939082C9539839 /* DefaultNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192C3C2D4D5337D3D415FA32570D481 /* DefaultNetworkClient.swift */; };
 		2ED6AD688420E92A70B91BE1A27B9B5B /* Colour.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5F245486D6FB76C3498A0847CDB57B /* Colour.swift */; };
 		42AF06E1D3C6E06DC71634B56BAB647D /* DebugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8B7E5791D788D9601BB53F8E52327 /* DebugLog.swift */; };
@@ -89,6 +90,7 @@
 		2AD366FF23416D5F001B1D7F /* APIMockNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMockNetworkClient.swift; sourceTree = "<group>"; };
 		2AD3670323416DBD001B1D7F /* TestUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtilities.swift; sourceTree = "<group>"; };
 		2AD367072341742D001B1D7F /* NetworkMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMocks.swift; sourceTree = "<group>"; };
+		2AFA363B2342152500FD2D4A /* PlaceholderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderViewModel.swift; sourceTree = "<group>"; };
 		2B1D6B04C52FA398E8EFB66F7BE95F6E /* EphemeralNetworkConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EphemeralNetworkConfigurator.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		35DA07D97775AA55FC1A6F0368C5F016 /* KeyChainAccessKeys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyChainAccessKeys.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				912B558C2C968F2719EA6A5FB324B487 /* BaseTableView.swift */,
 				4EDC6B45729181C56CC7E53605F0D59F /* ErrorBannerView.swift */,
 				4844018CC108A13500B6C279927DE080 /* PlaceholderView.swift */,
+				2AFA363B2342152500FD2D4A /* PlaceholderViewModel.swift */,
 			);
 			name = UIElements;
 			path = Sources/UIElements;
@@ -649,6 +652,7 @@
 				D0D08D718C227452D228BF55EF0E4109 /* NetworkErrors.swift in Sources */,
 				C0AA37E728845948739A97A5940BC061 /* NetworkInterfaces.swift in Sources */,
 				2AD3670223416D84001B1D7F /* APIMockNetworkClient.swift in Sources */,
+				2AFA363C2342152500FD2D4A /* PlaceholderViewModel.swift in Sources */,
 				1320C4ACB2A33A2064E630A19EC6927C /* NetworkResult.swift in Sources */,
 				E368B9452CE9FB609122690D33CE4B6C /* NetworkService.swift in Sources */,
 				56D4EEE2A2C16C73BAD6C4F2AABA1C9A /* OperationResult.swift in Sources */,

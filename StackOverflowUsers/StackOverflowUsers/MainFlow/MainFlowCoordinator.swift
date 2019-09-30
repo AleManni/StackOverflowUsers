@@ -52,8 +52,15 @@ extension MainFlowCoordinator {
    Sets the initial screen for the app
  */
   private func showUsersList() {
-//    let usersListViewController = factory.buildUsersListView((router: self)
-//    navigationController.setViewControllers([usersListViewController], animated: true)
+    let usersListViewController = factory.buildUsersListView(router: self)
+    navigationController.setViewControllers([usersListViewController], animated: true)
+  }
+}
+
+extension MainFlowCoordinator: UsersListPresenterRouter {
+  
+  func didTapNext() {
+    // Empty
   }
 }
 

@@ -20,11 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       AppCoordinatorService()
     ]
 
-    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
       var result = true
 
       services.forEach {
-        if let res = $0.application?(application, willFinishLaunchingWithOptions: launchOptions), !res {
+        if let res = $0.application?(application, didFinishLaunchingWithOptions: launchOptions), !res {
           result = false
         }
       }

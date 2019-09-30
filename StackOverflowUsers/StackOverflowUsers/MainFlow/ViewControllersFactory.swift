@@ -13,6 +13,8 @@
  In this instance, TestRepositories is used to feed mock data during UI tests
  */
 
+import SharedComponents
+
 final class ViewControllersFactory {
 
   let repositories: AppRepositories
@@ -24,17 +26,17 @@ final class ViewControllersFactory {
 
 extension ViewControllersFactory {
   
-   //  func buildUsersListView(router: FlowCoordinator) -> UsersListViewController {
-   //    let view = TransactionsViewController()
-   //    let interactor = TransactionsInteractor(repository: repositories.transactionsRepository)
-   //    let presenter = TransactionsPresenter()
-   //    view.presenter = presenter
-   //    presenter.interactor = interactor
-   //    interactor.output = presenter
-   //    presenter.view = view
-   //    presenter.router = router
-   //    return view
-   //  }
+     func buildUsersListView(router: UsersListPresenterRouter) -> UsersListViewController {
+       let view = UsersListViewController()
+       let interactor = UsersListInteractor(repository: repositories.usersRepository)
+       let presenter = UsersListPresenter()
+       view.presenter = presenter
+       presenter.interactor = interactor
+       interactor.output = presenter
+       presenter.output = view
+       presenter.router = router
+       return view
+     }
 
 }
 

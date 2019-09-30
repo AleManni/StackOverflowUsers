@@ -29,7 +29,7 @@ final class AppCoordinatorService: AppService {
 
 extension AppCoordinatorService: ApplicationService {
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool  {
     mainFlowCoordinator?.start()
     return true
   }
