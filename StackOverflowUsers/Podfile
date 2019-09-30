@@ -1,0 +1,10 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'StackOverflowUsers' do
+	pod 'SharedComponents', :path => '../Modules/SharedComponents'
+end
+
+	target 'StackOverflowUsersTests' do 
+	pod 'SharedComponents', :path => '../Modules/SharedComponents'
+end
