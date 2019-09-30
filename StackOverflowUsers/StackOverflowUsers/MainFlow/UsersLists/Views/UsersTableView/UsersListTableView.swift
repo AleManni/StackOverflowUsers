@@ -40,6 +40,15 @@ final class UsersListTableView: BaseTableView {
     self.requiresPlaceholder = viewModel.requiresPlaceholder
     reloadData()
   }
+  
+  func updateCell(at indexPath: IndexPath, with viewModel: UserCellViewModel) {
+    cellViewModels[indexPath.row] = viewModel
+    if let visibleIndexPaths = indexPathsForVisibleRows?.firstIndex(of: indexPath as IndexPath) {
+        if visibleIndexPaths != NSNotFound {
+            reloadRows(at: [indexPath], with: .fade)
+        }
+    }
+  }
 }
 
 extension UsersListTableView: UITableViewDataSource {

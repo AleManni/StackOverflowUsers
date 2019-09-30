@@ -105,7 +105,7 @@ extension UsersListViewController: UsersListPresenterOutput {
   }
   
   func updateUser(at index: Int, viewModel: UserCellViewModel) {
-    // TO BE IMPLEMENTED
+    tableView.updateCell(at: IndexPath(row: index, section: 0), with: viewModel)
   }
 
 }

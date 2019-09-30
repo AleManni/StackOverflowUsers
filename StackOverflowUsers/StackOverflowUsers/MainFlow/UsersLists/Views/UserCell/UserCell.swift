@@ -30,6 +30,8 @@ final class  UserCell: UITableViewCell {
   
   weak var delegate: UserCellDelegate?
   
+  private var canOpen: Bool = true
+  
   private var isOpen: Bool = false {
     didSet {
       disclosableView.isHidden = !isOpen
@@ -44,8 +46,6 @@ final class  UserCell: UITableViewCell {
   }
   
   private func formatViews() {
-    FontFormatter.format(label: primaryLabel, textStyle: (font: .bodyRegular, color: .navyBlue))
-    FontFormatter.format(label: secondaryLabel, textStyle: (font: .bodySmallRegular, color: .navyBlue))
     FontFormatter.format(label: followLabel, textStyle: (font: .bodyLargeBold, color: .red))
     FontFormatter.format(button: primaryButton, textStyle: (font: .bodySmallRegular, color: .white))
     FontFormatter.format(button: secondaryButton, textStyle: (font: .bodySmallRegular, color: .white))
@@ -59,17 +59,27 @@ final class  UserCell: UITableViewCell {
   }
   
   func populate(with viewModel: UserCellViewModel) {
+    isOpen = false
     mainImageView.setImageWithURLString(viewModel.mainImageURL, placeholder: nil)
     followLabel.text = viewModel.icon
     primaryLabel.text = viewModel.primaryLabelText
     secondaryLabel.text = viewModel.secondaryLabelText
     primaryButton.setTitle(viewModel.primaryButtonTitle, for: .normal)
     secondaryButton.setTitle(viewModel.secondayButtonTitle, for: .normal)
-  }
+    canOpen = viewModel.isDisclosable
+    let textColor = viewModel.isDisclosable ? Colours.navyBlue : Colours.custom(.gray)
+    let alpha: CGFloat = viewModel.isDisclosable ? 1 : 0.5
+    FontFormatter.format(label: primaryLabel, textStyle: (font: .bodyRegular, color: textColor))
+    FontFormatter.format(label: secondaryLabel, textStyle: (font: .bodySmallRegular, color: textColor))
+    followLabel.alpha = alpha
+    mainImageView.alpha = alpha
+    }
   
   //MARK: - user actions
   func didTouch() {
+    if canOpen {
     isOpen.toggle()
+    }
   }
   
   @IBAction func didTapPrimaryButton(_ sender: Any) {

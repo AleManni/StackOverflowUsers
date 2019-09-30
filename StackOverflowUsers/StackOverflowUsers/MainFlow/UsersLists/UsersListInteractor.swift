@@ -29,16 +29,29 @@ extension UsersListInteractor: UsersListInteractorInput {
   }
   
   func followUser(_ userId: Int) {
-    output?.userDidUpdate(result: repository.followUser(userId))
+    let updateResult = repository.followUser(userId)
+    propagateUpdate(with: updateResult)
   }
   
   func unfollowUser(_ userId: Int) {
-    output?.userDidUpdate(result: repository.unfollowUser(userId))
+    let updateResult = repository.unfollowUser(userId)
+    propagateUpdate(with: updateResult)
   }
   
   func blockUser(_ userId: Int) {
-    output?.userDidUpdate(result: repository.blockUser(userId))
+    let updateResult = repository.blockUser(userId)
+    propagateUpdate(with: updateResult)
   }
   
+  private func propagateUpdate(with result: OperationResult<User>) {
+    output?.userDidUpdate(result: result)
+    switch result {
+    case .success(let user):
+      if let index = users.firstIndex(where: { $0.identifier == user.identifier }) {
+        users[index] = user
+      }
+    default:
+      break
+    }
+  }  
 }
-

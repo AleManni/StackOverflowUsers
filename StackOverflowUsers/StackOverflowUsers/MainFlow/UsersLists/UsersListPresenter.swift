@@ -56,6 +56,7 @@ extension UsersListPresenter: UsersListInteractorOutput {
         return
       }
       output?.updateUser(at: userIndex, viewModel: UserCellViewModel(with: user))
+      data[userIndex] = user
     
     case .failure(let error):
       let viewModel = UsersListViewModel(error: error)
