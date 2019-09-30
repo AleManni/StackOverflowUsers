@@ -12,10 +12,9 @@ import SharedComponents
  `AppearanceService` is an app service that manage all the app general appearance.
  */
 final class AppearanceService: AppService, ApplicationService {
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-    setupNavigationBar()
-    application.statusBarStyle = .lightContent
+  
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+   configureNavigationBarAppearance()
     return true
   }
 }
@@ -24,25 +23,25 @@ final class AppearanceService: AppService, ApplicationService {
 
 extension AppearanceService {
   
-    private func setupNavigationBar() {
-        let titleColor = Colours.white.rawValue
-
+  private func configureNavigationBarAppearance() {
+    let navBarAppearance = UINavigationBarAppearance()
+    navBarAppearance.configureWithOpaqueBackground()
+    navBarAppearance.backgroundColor = Colours.white.rawValue
+    let titleColor = Colours.navyBlue.rawValue
+    
     if #available(iOS 11.0, *) {
-      UINavigationBar.appearance().titleTextAttributes = [
+      navBarAppearance.titleTextAttributes = [
         NSAttributedString.Key.foregroundColor: titleColor
       ]
-        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
+      navBarAppearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
+      UINavigationBar.appearance().prefersLargeTitles = true
+      UINavigationBar.appearance(whenContainedInInstancesOf: [UINavigationController.self]).standardAppearance = navBarAppearance
+      UINavigationBar.appearance(whenContainedInInstancesOf: [UINavigationController.self]).scrollEdgeAppearance = navBarAppearance
     } else {
-      UINavigationBar.appearance().titleTextAttributes = [
+      navBarAppearance.titleTextAttributes = [
         NSAttributedString.Key.foregroundColor: titleColor,
         NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17.0, weight: .light)
       ]
-    }
-    UINavigationBar.appearance().tintColor = .white
-    UINavigationBar.appearance().barTintColor = Colours.navyBlue.rawValue
-    UINavigationBar.appearance().isTranslucent = false
-    if #available(iOS 11.0, *) {
-      UINavigationBar.appearance().prefersLargeTitles = true
     }
   }
 }

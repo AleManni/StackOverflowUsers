@@ -55,7 +55,7 @@ final class UsersListViewController: UIViewController {
       tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
     ])
     
-    errorBannerTopConstraint = errorBanner.topAnchor.constraint(equalTo: view.topAnchor)
+    errorBannerTopConstraint = errorBanner.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
     errorBannerTopConstraint?.constant = errorBannerOffset ?? -errorBannerHeight
     errorBannerTopConstraint?.isActive = true
   }
@@ -100,9 +100,7 @@ extension UsersListViewController: UsersListPresenterOutput {
   
   func displayUsersList(with viewModel: UsersListViewModel) {
     self.title = viewModel.title
-    if let warning = viewModel.errorWarning {
-    displayWarning(warning)
-    }
+    displayWarning(viewModel.errorWarning)
     tableView.populate(with: viewModel.tableModel)
   }
   

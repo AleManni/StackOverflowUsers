@@ -55,7 +55,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="kpg-xj-hsA" secondAttribute="trailing" constant="16" id="1O9-Ex-YlD"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZrA-g7-pwG" secondAttribute="bottom" constant="8" id="7LY-UT-yq8"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZrA-g7-pwG" secondAttribute="bottom" priority="750" constant="8" id="7LY-UT-yq8"/>
                                     <constraint firstItem="ZrA-g7-pwG" firstAttribute="top" secondItem="5dw-P7-oXT" secondAttribute="top" constant="8" id="PZq-p1-Zdw"/>
                                     <constraint firstItem="kpg-xj-hsA" firstAttribute="leading" secondItem="i9w-gD-9nq" secondAttribute="trailing" constant="16" id="Uax-cZ-l3U"/>
                                     <constraint firstItem="i9w-gD-9nq" firstAttribute="leading" secondItem="ZrA-g7-pwG" secondAttribute="trailing" constant="8" id="iFU-7S-zBm"/>
@@ -64,11 +64,11 @@
                                     <constraint firstItem="ZrA-g7-pwG" firstAttribute="leading" secondItem="5dw-P7-oXT" secondAttribute="leading" constant="8" id="z7L-vu-QOB"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7a-OJ-3LE" userLabel="DisclosureView">
+                            <view contentMode="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="r7a-OJ-3LE" userLabel="DisclosureView">
                                 <rect key="frame" x="0.0" y="76" width="414" height="54"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="dZ0-rP-1Yx" userLabel="DisclosableStack View">
-                                        <rect key="frame" x="8" y="8" width="204" height="38"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="dZ0-rP-1Yx" userLabel="DisclosableStack View">
+                                        <rect key="frame" x="8" y="8" width="188" height="38"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXT-p4-YKd" userLabel="primaryButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="78" height="38"/>
@@ -79,7 +79,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1X-PD-6nl" userLabel="secondaryButton">
-                                                <rect key="frame" x="126" y="0.0" width="78" height="38"/>
+                                                <rect key="frame" x="110" y="0.0" width="78" height="38"/>
                                                 <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>

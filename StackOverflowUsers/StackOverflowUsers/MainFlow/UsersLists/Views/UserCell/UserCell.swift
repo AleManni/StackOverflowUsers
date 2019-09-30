@@ -51,10 +51,11 @@ final class  UserCell: UITableViewCell {
     FontFormatter.format(button: secondaryButton, textStyle: (font: .bodySmallRegular, color: .white))
     primaryButton.backgroundColor = Colours.navyBlue.rawValue
     secondaryButton.backgroundColor = Colours.red.rawValue
-    primaryButton.layer.cornerRadius = 2
-    secondaryButton.layer.cornerRadius = 2
+    primaryButton.layer.cornerRadius = 8
+    secondaryButton.layer.cornerRadius = 8
     mainImageView.layer.cornerRadius = 5
     mainImageView.layer.masksToBounds = true
+    separatorInset.left = mainImageView.frame.minX
   }
   
   func populate(with viewModel: UserCellViewModel) {

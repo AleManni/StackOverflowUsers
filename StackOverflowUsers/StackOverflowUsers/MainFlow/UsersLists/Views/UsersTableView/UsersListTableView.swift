@@ -33,6 +33,7 @@ final class UsersListTableView: BaseTableView {
   }
   
   func populate(with viewModel: UsersListTableViewModel) {
+    endRefreshing()
     self.cellViewModels = viewModel.cellViewModels
     self.isLoading = viewModel.displayLoadingIndicator
     self.populatePlaceholder(with: viewModel.placeholderViewModel)
