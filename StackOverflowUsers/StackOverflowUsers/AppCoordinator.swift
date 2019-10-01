@@ -1,5 +1,5 @@
 //
-//  AppCoordinatorService.swift
+//  AppCoordinator.swift
 //  StackOverflowUsers
 //
 //  Created by Alessandro Manni on 29/09/2019.
@@ -11,8 +11,9 @@ import SharedComponents
 final class AppCoordinator {
     
     private var repositories: AppRepositories {
-      #if TESTING
-      return ProductionRepositories() // TestsRepositories()
+      #if UITEST
+      // Not scoped in this demo app, but here you can inject the mock repos to be used by the ui tests target
+      return ProductionRepositories()
       #else
       return ProductionRepositories()
       #endif

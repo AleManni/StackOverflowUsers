@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0DFCA56AD7DDD6678D63FAE0 /* Pods_StackOverflowUsers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B172E1552386F7D44BAEE7 /* Pods_StackOverflowUsers.framework */; };
+		2AA063292343B0ED00A3EEDB /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA063282343B0ED00A3EEDB /* MockUser.swift */; };
+		2AA0632C2343B24200A3EEDB /* UserCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0632B2343B24200A3EEDB /* UserCellViewModelTests.swift */; };
+		2AA0632E2343B6CA00A3EEDB /* UsersListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0632D2343B6CA00A3EEDB /* UsersListViewModelTests.swift */; };
 		2AD366BB2341056C001B1D7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD366BA2341056C001B1D7F /* AppDelegate.swift */; };
 		2AD366C12341056D001B1D7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD366C02341056D001B1D7F /* Assets.xcassets */; };
 		2AD366C42341056D001B1D7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD366C32341056D001B1D7F /* Preview Assets.xcassets */; };
@@ -56,6 +59,9 @@
 /* Begin PBXFileReference section */
 		0B86BC48C21185D060F10530 /* Pods-StackOverflowUsersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowUsersTests.debug.xcconfig"; path = "Target Support Files/Pods-StackOverflowUsersTests/Pods-StackOverflowUsersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		11B172E1552386F7D44BAEE7 /* Pods_StackOverflowUsers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackOverflowUsers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AA063282343B0ED00A3EEDB /* MockUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
+		2AA0632B2343B24200A3EEDB /* UserCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModelTests.swift; sourceTree = "<group>"; };
+		2AA0632D2343B6CA00A3EEDB /* UsersListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModelTests.swift; sourceTree = "<group>"; };
 		2AD366B72341056C001B1D7F /* StackOverflowUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflowUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD366BA2341056C001B1D7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AD366C02341056D001B1D7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,6 +124,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AA0632A2343B20C00A3EEDB /* ViewModelsTests */ = {
+			isa = PBXGroup;
+			children = (
+				2AA0632B2343B24200A3EEDB /* UserCellViewModelTests.swift */,
+				2AA0632D2343B6CA00A3EEDB /* UsersListViewModelTests.swift */,
+			);
+			path = ViewModelsTests;
+			sourceTree = "<group>";
+		};
+		2AA0632F2343BB3800A3EEDB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2AD366EA23411E2C001B1D7F /* UsersAPI.swift */,
+				2AD366FA23414105001B1D7F /* UsersListNetworkModel.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		2AD366AE2341056C001B1D7F = {
 			isa = PBXGroup;
 			children = (
@@ -141,11 +165,12 @@
 		2AD366B92341056C001B1D7F /* StackOverflowUsers */ = {
 			isa = PBXGroup;
 			children = (
-				2AD366E12341185B001B1D7F /* Repositories */,
-				2AD366DC2341145B001B1D7F /* Services */,
-				2AD366F323413942001B1D7F /* MainFlow */,
 				2AD366BA2341056C001B1D7F /* AppDelegate.swift */,
 				2AFA369C234286B400FD2D4A /* SceneDelegate.swift */,
+				2AD366DD23411465001B1D7F /* AppCoordinator.swift */,
+				2AD366DC2341145B001B1D7F /* Services */,
+				2AD366E12341185B001B1D7F /* Repositories */,
+				2AD366F323413942001B1D7F /* MainFlow */,
 				2AD366C02341056D001B1D7F /* Assets.xcassets */,
 				2AD366C52341056D001B1D7F /* LaunchScreen.storyboard */,
 				2AD366C82341056D001B1D7F /* Info.plist */,
@@ -167,6 +192,7 @@
 			children = (
 				2AFA362C2341F47A00FD2D4A /* DataSourcesTests */,
 				2AFA362D2341F48E00FD2D4A /* RepositoryTests */,
+				2AA0632A2343B20C00A3EEDB /* ViewModelsTests */,
 				2AFA362B2341F47100FD2D4A /* Mocks */,
 				2AD366D32341056E001B1D7F /* Info.plist */,
 			);
@@ -176,7 +202,6 @@
 		2AD366DC2341145B001B1D7F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				2AD366DD23411465001B1D7F /* AppCoordinator.swift */,
 				2AD366DF23411721001B1D7F /* AppearanceService.swift */,
 			);
 			path = Services;
@@ -187,7 +212,6 @@
 			children = (
 				2AD366E2234118DD001B1D7F /* AppRepositories.swift */,
 				2AD366E623411C54001B1D7F /* UserRepository */,
-				2AD366E923411DF6001B1D7F /* DataSources */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -198,6 +222,7 @@
 				2AD366E423411A94001B1D7F /* UserReporitoryProtocol.swift */,
 				2AD366F123413580001B1D7F /* UsersRepository.swift */,
 				2AD366F02341355F001B1D7F /* DomainModels */,
+				2AD366E923411DF6001B1D7F /* DataSources */,
 			);
 			path = UserRepository;
 			sourceTree = "<group>";
@@ -205,8 +230,7 @@
 		2AD366E923411DF6001B1D7F /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				2AD366EA23411E2C001B1D7F /* UsersAPI.swift */,
-				2AD366FA23414105001B1D7F /* UsersListNetworkModel.swift */,
+				2AA0632F2343BB3800A3EEDB /* API */,
 				2AD366EC23411E60001B1D7F /* FollowedUsersDatabase.swift */,
 				2AD366EE23411E6F001B1D7F /* BlockedUsersDatabase.swift */,
 			);
@@ -235,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				2AD366FC23416BD1001B1D7F /* MockUsersAPI.swift */,
+				2AA063282343B0ED00A3EEDB /* MockUser.swift */,
 				2AD3670523416F1D001B1D7F /* users_list.json */,
 			);
 			path = Mocks;
@@ -539,6 +564,9 @@
 				2AFA36312341FDD000FD2D4A /* UserDomainModelTest.swift in Sources */,
 				2AD366FD23416BD1001B1D7F /* MockUsersAPI.swift in Sources */,
 				2AD3670B23417B8A001B1D7F /* UserNetworkModelTest.swift in Sources */,
+				2AA0632C2343B24200A3EEDB /* UserCellViewModelTests.swift in Sources */,
+				2AA063292343B0ED00A3EEDB /* MockUser.swift in Sources */,
+				2AA0632E2343B6CA00A3EEDB /* UsersListViewModelTests.swift in Sources */,
 				2AFA362F2341F4FD00FD2D4A /* UsersRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

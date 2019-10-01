@@ -18,9 +18,3 @@ final class ProductionRepositories: AppRepositories {
     UsersRepository(api: UsersAPI(NetworkService.safeSession), followedUsersDatabase: FollowedUsersDatabase(), blockedUsersDatabase: BlockedUsersDatabase())
 }
 
-//final class TestsRepositories: AppRepositories {
-//  var usersRepository: UsersRepositoryProtocol =
-//    TransactionsRepository(api: TransactionsMockAPI(),
-//                           database: TransactionsDatabase())
-//}
-

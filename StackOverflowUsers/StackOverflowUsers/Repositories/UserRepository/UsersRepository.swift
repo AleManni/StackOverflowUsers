@@ -11,7 +11,7 @@ import SharedComponents
 final class UsersRepository: UsersRepositoryProtocol {
   
   struct UserNotFoundError: LocalizedError {
-    var errorDescription: String? = NSLocalizedString("UsersRepositorySerNotFoundError", comment: "User not found error")
+    var errorDescription: String? = NSLocalizedString("Users Repository: user not found", comment: "User not found error")
   }
   
   let api: UsersAPIProtocol
