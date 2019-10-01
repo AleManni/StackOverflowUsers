@@ -25,6 +25,7 @@ protocol UsersListPresenterInput: class {
   func viewDidLoad()
   func didTapPrimaryButtonForElement(at index: Int)
   func didTapSecondaryButtonForElement(at index: Int)
+  func didTapCell(at index: Int) 
 }
 
 protocol UsersListPresenterOutput: class {

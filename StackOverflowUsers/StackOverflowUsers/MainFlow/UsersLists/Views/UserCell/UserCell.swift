@@ -25,18 +25,8 @@ final class  UserCell: UITableViewCell {
   @IBOutlet weak var secondaryButton: UIButton!
   @IBOutlet weak var disclosableView: UIView!
   static let identifier = "userCellIdentifier"
-
-//private var itemId: String?
   
   weak var delegate: UserCellDelegate?
-  
-  private var canOpen: Bool = true
-  
-  private var isOpen: Bool = false {
-    didSet {
-      disclosableView.isHidden = !isOpen
-    }
-  }
   
   //MAR: - life cycle
   override func awakeFromNib() {
@@ -59,16 +49,15 @@ final class  UserCell: UITableViewCell {
   }
   
   func populate(with viewModel: UserCellViewModel) {
-    isOpen = false
+    disclosableView.isHidden = !viewModel.isDisclosed
     mainImageView.setImageWithURLString(viewModel.mainImageURL, placeholder: nil)
     followLabel.text = viewModel.icon
     primaryLabel.text = viewModel.primaryLabelText
     secondaryLabel.text = viewModel.secondaryLabelText
     primaryButton.setTitle(viewModel.primaryButtonTitle, for: .normal)
     secondaryButton.setTitle(viewModel.secondayButtonTitle, for: .normal)
-    canOpen = viewModel.isDisclosable
-    let textColor = viewModel.isDisclosable ? Colours.navyBlue : Colours.custom(.gray)
-    let alpha: CGFloat = viewModel.isDisclosable ? 1 : 0.5
+    let textColor = viewModel.isDisabled ? Colours.custom(.gray) : Colours.navyBlue
+    let alpha: CGFloat = viewModel.isDisabled ? 0.5 : 1
     FontFormatter.format(label: primaryLabel, textStyle: (font: .bodyRegular, color: textColor))
     FontFormatter.format(label: secondaryLabel, textStyle: (font: .bodySmallRegular, color: textColor))
     followLabel.alpha = alpha
@@ -76,11 +65,6 @@ final class  UserCell: UITableViewCell {
     }
   
   //MARK: - user actions
-  func didTouch() {
-    if canOpen {
-    isOpen.toggle()
-    }
-  }
   
   @IBAction func didTapPrimaryButton(_ sender: Any) {
     delegate?.cellDidTapPrimaryButton(self)

@@ -38,9 +38,7 @@
 		2AFA36412342217F00FD2D4A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA36402342217F00FD2D4A /* UserCell.swift */; };
 		2AFA36432342244A00FD2D4A /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA36422342244A00FD2D4A /* UserCellViewModel.swift */; };
 		2AFA36452342505100FD2D4A /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA363523420D0800FD2D4A /* UsersListViewModel.swift */; };
-		2AFA36472342543100FD2D4A /* UsersListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA36462342543100FD2D4A /* UsersListTableView.swift */; };
 		2AFA3649234258D700FD2D4A /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA3648234258D700FD2D4A /* UsersListViewController.swift */; };
-		2AFA364C23425B0000FD2D4A /* UsersListTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA364B23425B0000FD2D4A /* UsersListTableViewModel.swift */; };
 		2AFA369D234286B500FD2D4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA369C234286B400FD2D4A /* SceneDelegate.swift */; };
 		D2BF0FF95017D32FA85596DB /* Pods_StackOverflowUsersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E8E97592A6AE288F0E002AB /* Pods_StackOverflowUsersTests.framework */; };
 /* End PBXBuildFile section */
@@ -92,9 +90,7 @@
 		2AFA363E23421BAF00FD2D4A /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		2AFA36402342217F00FD2D4A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		2AFA36422342244A00FD2D4A /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
-		2AFA36462342543100FD2D4A /* UsersListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListTableView.swift; sourceTree = "<group>"; };
 		2AFA3648234258D700FD2D4A /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
-		2AFA364B23425B0000FD2D4A /* UsersListTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListTableViewModel.swift; sourceTree = "<group>"; };
 		2AFA369C234286B400FD2D4A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4E8E97592A6AE288F0E002AB /* Pods_StackOverflowUsersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackOverflowUsersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A57B5ECA4997E2D46D233A /* Pods-StackOverflowUsersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowUsersTests.release.xcconfig"; path = "Target Support Files/Pods-StackOverflowUsersTests/Pods-StackOverflowUsersTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -278,7 +274,6 @@
 			isa = PBXGroup;
 			children = (
 				2AFA364A2342592600FD2D4A /* UserCell */,
-				2AFA364D23425B3400FD2D4A /* UsersTableView */,
 				2AFA369E2342B4E300FD2D4A /* UserListViewController */,
 			);
 			path = Views;
@@ -292,15 +287,6 @@
 				2AFA36422342244A00FD2D4A /* UserCellViewModel.swift */,
 			);
 			path = UserCell;
-			sourceTree = "<group>";
-		};
-		2AFA364D23425B3400FD2D4A /* UsersTableView */ = {
-			isa = PBXGroup;
-			children = (
-				2AFA36462342543100FD2D4A /* UsersListTableView.swift */,
-				2AFA364B23425B0000FD2D4A /* UsersListTableViewModel.swift */,
-			);
-			path = UsersTableView;
 			sourceTree = "<group>";
 		};
 		2AFA369E2342B4E300FD2D4A /* UserListViewController */ = {
@@ -533,9 +519,7 @@
 				2AFA363A23420F0600FD2D4A /* UsersListPresenter.swift in Sources */,
 				2AD366FB23414105001B1D7F /* UsersListNetworkModel.swift in Sources */,
 				2AFA363423420AE600FD2D4A /* UsersListProtocols.swift in Sources */,
-				2AFA36472342543100FD2D4A /* UsersListTableView.swift in Sources */,
 				2AD366E023411721001B1D7F /* AppearanceService.swift in Sources */,
-				2AFA364C23425B0000FD2D4A /* UsersListTableViewModel.swift in Sources */,
 				2AD366BB2341056C001B1D7F /* AppDelegate.swift in Sources */,
 				2AD366EB23411E2C001B1D7F /* UsersAPI.swift in Sources */,
 				2AD366F223413580001B1D7F /* UsersRepository.swift in Sources */,

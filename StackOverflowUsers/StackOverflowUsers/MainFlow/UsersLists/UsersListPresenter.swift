@@ -14,7 +14,7 @@ final class UsersListPresenter {
   weak var router: UsersListPresenterRouter?
   var interactor: UsersListInteractorInput?
   private var data = [User]()
-  
+  private var disclosedCellIndexes: Set<Int> = []
 }
   
 extension UsersListPresenter: UsersListPresenterInput {
@@ -36,6 +36,22 @@ extension UsersListPresenter: UsersListPresenterInput {
       return
     }
     interactor?.blockUser(user.identifier)
+  }
+  
+  func didTapCell(at index: Int) {
+    guard let user = data[safe: index],
+      !user.isBlocked else {
+        return
+    }
+    updatesDisclosedCellIndexes(with: index)
+    let viewModel = UserCellViewModel(with: user, isDisclosed: disclosedCellIndexes.contains(index))
+    output?.displayUpdate(at: index, with: viewModel)
+  }
+  
+  private func updatesDisclosedCellIndexes(with index: Int) {
+    if disclosedCellIndexes.contains(index) {
+      disclosedCellIndexes.remove(index)
+    } else { disclosedCellIndexes.insert(index) }
   }
 }
 
@@ -61,8 +77,11 @@ extension UsersListPresenter: UsersListInteractorOutput {
       guard let userIndex = data.firstIndex(where: { $0.identifier == user.identifier }) else {
         return
       }
-      output?.displayUpdate(at: userIndex, with: UserCellViewModel(with: user))
       data[userIndex] = user
+      updatesDisclosedCellIndexes(with: userIndex)
+      let viewModel = UserCellViewModel(with: user, isDisclosed: disclosedCellIndexes.contains(userIndex))
+      output?.displayUpdate(at: userIndex, with: viewModel)
+      
     case .failure(let error):
       let viewModel = UsersListViewModel(error: error)
       output?.displayUsersList(with: viewModel)
