@@ -12,7 +12,7 @@ final class UsersListViewController: UIViewController {
   
   var presenter: UsersListPresenterInput?
   
-  lazy var tableView: UsersListTableView = {
+  private lazy var tableView: UsersListTableView = {
     let table = UsersListTableView(style: .plain)
     table.refreshDelegate = self
     table.actionDelegate = self
@@ -21,9 +21,9 @@ final class UsersListViewController: UIViewController {
   
   lazy var errorBanner = ErrorBannerView(frame: .zero)
   
-  var errorBannerTopConstraint: NSLayoutConstraint?
-  
   private let errorBannerHeight: CGFloat = 40
+  
+  private var errorBannerTopConstraint: NSLayoutConstraint?
   
   private var errorBannerOffset: CGFloat?
   
@@ -44,7 +44,6 @@ final class UsersListViewController: UIViewController {
     errorBanner.translatesAutoresizingMaskIntoConstraints = false
     
     NSLayoutConstraint.activate([
-      
       errorBanner.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       errorBanner.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       errorBanner.heightAnchor.constraint(equalToConstant: errorBannerHeight),
@@ -62,7 +61,7 @@ final class UsersListViewController: UIViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    presenter?.presentData()
+    presenter?.viewDidLoad()
   }
   
   private func displayWarning(_ warning: String?) {
@@ -79,7 +78,7 @@ final class UsersListViewController: UIViewController {
 
 extension UsersListViewController: BaseTableViewRefreshDelegate {
   func didPullToRefresh() {
-    presenter?.presentData()
+    presenter?.viewDidLoad()
   }
 }
 
@@ -92,7 +91,6 @@ extension UsersListViewController: UserListTableViewActionDelegate {
   func didTapSecondaryButtonAtIndex(_ index: Int) {
     presenter?.didTapSecondaryButtonForElement(at: index)
   }
-  
 }
 
 
@@ -104,7 +102,7 @@ extension UsersListViewController: UsersListPresenterOutput {
     tableView.populate(with: viewModel.tableModel)
   }
   
-  func updateUser(at index: Int, viewModel: UserCellViewModel) {
+  func displayUpdate(at index: Int, with viewModel: UserCellViewModel) {
     tableView.updateCell(at: IndexPath(row: index, section: 0), with: viewModel)
   }
 

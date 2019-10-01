@@ -8,13 +8,6 @@
 
 import SharedComponents
 
-// Router protocol for the UsersListPresenter class.
-protocol UsersListPresenterRouter: class {
-  // Since the flow is made of one single screen, the implementation of this protocol by the router is going to be empty.
-  // Added in order to demonstrate the dependency between this clase and the MainFlowCoordinator in terms of navigation/routing.
-  func didTapNext()
-}
-
 final class UsersListPresenter {
   
   weak var output: UsersListPresenterOutput?
@@ -26,7 +19,7 @@ final class UsersListPresenter {
   
 extension UsersListPresenter: UsersListPresenterInput {
   
-  func presentData() {
+  func viewDidLoad() {
     output?.displayUsersList(with: UsersListViewModel(models: data, isLoading: true))
     interactor?.fetchUsers()
   }
@@ -48,33 +41,31 @@ extension UsersListPresenter: UsersListPresenterInput {
 
 extension UsersListPresenter: UsersListInteractorOutput {
   
-  func userDidUpdate(result: OperationResult<User>) {
+   func usersFetched(result: OperationResult<[User]>) {
+     let viewModel: UsersListViewModel
+     
     switch result {
+     case .success(let users):
+       data = users
+       viewModel = UsersListViewModel(models: data)
+     case .failure(let error):
+       viewModel = UsersListViewModel(error: error)
+     }
+     output?.displayUsersList(with: viewModel)
+   }
+  
+  func userDidUpdate(result: OperationResult<User>) {
     
+    switch result {
     case .success(let user):
       guard let userIndex = data.firstIndex(where: { $0.identifier == user.identifier }) else {
         return
       }
-      output?.updateUser(at: userIndex, viewModel: UserCellViewModel(with: user))
+      output?.displayUpdate(at: userIndex, with: UserCellViewModel(with: user))
       data[userIndex] = user
-    
     case .failure(let error):
       let viewModel = UsersListViewModel(error: error)
       output?.displayUsersList(with: viewModel)
     }
-  }
-  
-  
-  func usersFetched(result: OperationResult<[User]>) {
-    let viewModel: UsersListViewModel
-    switch result {
-    case .success(let users):
-      data = users
-      viewModel = UsersListViewModel(models: data)
-      output?.displayUsersList(with: viewModel)
-    case .failure(let error):
-      viewModel = UsersListViewModel(error: error)
-    }
-    output?.displayUsersList(with: viewModel)
   }
 }

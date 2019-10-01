@@ -279,8 +279,7 @@
 			children = (
 				2AFA364A2342592600FD2D4A /* UserCell */,
 				2AFA364D23425B3400FD2D4A /* UsersTableView */,
-				2AFA363523420D0800FD2D4A /* UsersListViewModel.swift */,
-				2AFA3648234258D700FD2D4A /* UsersListViewController.swift */,
+				2AFA369E2342B4E300FD2D4A /* UserListViewController */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,6 +301,15 @@
 				2AFA364B23425B0000FD2D4A /* UsersListTableViewModel.swift */,
 			);
 			path = UsersTableView;
+			sourceTree = "<group>";
+		};
+		2AFA369E2342B4E300FD2D4A /* UserListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2AFA363523420D0800FD2D4A /* UsersListViewModel.swift */,
+				2AFA3648234258D700FD2D4A /* UsersListViewController.swift */,
+			);
+			path = UserListViewController;
 			sourceTree = "<group>";
 		};
 		B90A2960C02AC2AE4A686644 /* Pods */ = {
