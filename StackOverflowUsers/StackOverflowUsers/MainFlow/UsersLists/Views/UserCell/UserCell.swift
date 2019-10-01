@@ -17,13 +17,13 @@ protocol UserCellDelegate: class {
 
 final class  UserCell: UITableViewCell {
   
-  @IBOutlet weak var mainImageView: UIImageView!
-  @IBOutlet weak var followLabel: UILabel!
-  @IBOutlet weak var primaryLabel: UILabel!
-  @IBOutlet weak var secondaryLabel: UILabel!
-  @IBOutlet weak var primaryButton: UIButton!
-  @IBOutlet weak var secondaryButton: UIButton!
-  @IBOutlet weak var disclosableView: UIView!
+  @IBOutlet private weak var mainImageView: UIImageView!
+  @IBOutlet private weak var followLabel: UILabel!
+  @IBOutlet private weak var primaryLabel: UILabel!
+  @IBOutlet private weak var secondaryLabel: UILabel!
+  @IBOutlet private weak var primaryButton: UIButton!
+  @IBOutlet private weak var secondaryButton: UIButton!
+  @IBOutlet private weak var disclosableView: UIView!
   static let identifier = "userCellIdentifier"
   
   weak var delegate: UserCellDelegate?
@@ -32,7 +32,6 @@ final class  UserCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     formatViews()
-    disclosableView.isHidden = true
   }
   
   private func formatViews() {

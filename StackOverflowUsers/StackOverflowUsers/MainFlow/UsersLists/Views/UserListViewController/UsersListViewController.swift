@@ -80,6 +80,37 @@ final class UsersListViewController: UIViewController {
 
 }
 
+// MARK: - UITableViewDataSource
+extension UsersListViewController: UITableViewDataSource {
+  
+  func numberOfSections(in tableView: UITableView) -> Int {
+    return 1
+  }
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return tableSourceItems.count
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: UserCell.identifier) as? UserCell,
+      let viewModel = tableSourceItems[safe: indexPath.row] else {
+        return UITableViewCell()
+    }
+    cell.delegate = self
+    cell.populate(with: viewModel)
+    return cell
+  }
+}
+
+// MARK: - UITableViewDelegate
+extension UsersListViewController: UITableViewDelegate {
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+    presenter?.didTapCell(at: indexPath.row)
+  }
+}
+
 // MARK: - UsersListPresenterOutput
 extension UsersListViewController: UsersListPresenterOutput {
   
@@ -109,37 +140,6 @@ extension UsersListViewController: UsersListPresenterOutput {
 extension UsersListViewController: BaseTableViewRefreshDelegate {
   func didPullToRefresh() {
     presenter?.viewDidLoad()
-  }
-}
-
-// MARK: - UITableViewDataSource
-extension UsersListViewController: UITableViewDataSource {
-  
-  func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-  }
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return tableSourceItems.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: UserCell.identifier) as? UserCell,
-      let viewModel = tableSourceItems[safe: indexPath.row] else {
-        return UITableViewCell()
-    }
-    cell.delegate = self
-    cell.populate(with: viewModel)
-    return cell
-  }
-}
-
-// MARK: - UITableViewDelegate
-extension UsersListViewController: UITableViewDelegate {
-  
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    tableView.deselectRow(at: indexPath, animated: true)
-    presenter?.didTapCell(at: indexPath.row)
   }
 }
 
