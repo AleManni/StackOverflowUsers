@@ -1,8 +1,8 @@
 # StackOverflowUsers
 ## Installation
 
-- Check out **develop** branch and run **pod install**. 
-- Please note that Cocoapod is not used to install external dependencies but a **SharedComponents** framework that I used to encapsulate  the api & network service along with other utilities. These classes are tested in the framework Demo app. 
+- Check out **develop** branch.
+- Please note that I used a **SharedComponents** framework in order to encapsulate  the api & network service along with other utilities used by the app. These classes are tested in the framework Demo app. I committed the Pod folder for ease of use, so there shouldn be not need to run '''pod install''' in the project folder.
  
 
  ## Architecture
