@@ -1,15 +1,12 @@
 # StackOverflowUsers
-## Info
-
-
-> Installation
+## Installation
 
 - Check out **develop** branch and run **pod install**. 
 - Please note that Cocoapod is not used to install external dependencies but a **SharedComponents** framework that I used to encapsulate  the api & network service along with other utilities. These classes are tested in the framework Demo app. 
  
 
  ## Architecture
- >
+ 
  The app implements a **Viper** architecture, with a "twist": the Router service is performed by a **FlowCoordinator** (Navigation Coordinator pattern).
 
 
