@@ -1,0 +1,15 @@
+platform :ios, '10.0'
+use_frameworks!
+
+
+	target 'DemoApp' do
+	pod 'SharedComponents', :path => '../'
+end
+
+	target 'DemoAppTests' do
+	pod 'SharedComponents', :path => '../'
+end
+
+  
+
+ 

@@ -1,0 +1,16 @@
+PODS:
+  - SharedComponents (0.1.0)
+
+DEPENDENCIES:
+  - SharedComponents (from `../`)
+
+EXTERNAL SOURCES:
+  SharedComponents:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SharedComponents: 512c033594c6c2f01e7190ef5188b9b464bca9de
+
+PODFILE CHECKSUM: 192abb8dc9bf9f0d013cc6ed04ac49d0958f76e2
+
+COCOAPODS: 1.8.1

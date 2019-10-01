@@ -1,0 +1,22 @@
+{
+  "name": "SharedComponents",
+  "platforms": {
+    "ios": "10.0"
+  },
+  "version": "0.1.0",
+  "summary": "SharedComponents to be used in test apps",
+  "homepage": "https.alessandromanni.com",
+  "license": "Internal use only",
+  "authors": "Alessandro Manni",
+  "source": {
+    "git": "https://github.com/AleManni"
+  },
+  "source_files": "Sources/**/*",
+  "resource_bundles": {
+    "SharedComponents": [
+      "SharedComponents/Resources/**/*",
+      "SharedComponents/Classes/**/*.xib",
+      "SharedComponents/Classes/**/*.storyboard"
+    ]
+  }
+}
