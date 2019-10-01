@@ -1,0 +1,6 @@
+framework module SharedComponents {
+  umbrella header "SharedComponents-umbrella.h"
+
+  export *
+  module * { export * }
+}
