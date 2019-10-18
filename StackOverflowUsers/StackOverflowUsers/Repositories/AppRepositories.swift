@@ -15,6 +15,6 @@ protocol AppRepositories {
 final class ProductionRepositories: AppRepositories {
   
   var usersRepository: UsersRepositoryProtocol =
-    UsersRepository(api: UsersAPI(NetworkService.safeSession), followedUsersDatabase: FollowedUsersDatabase(), blockedUsersDatabase: BlockedUsersDatabase())
+    UsersRepository(api: UsersAPI(NetworkService.safeSession), followedUsersDatabase: FollowedUsersDatabase(), blockedUsersDatabase: BlockedUsersDatabase(), usersDatabase: UsersDatabase())
 }
 

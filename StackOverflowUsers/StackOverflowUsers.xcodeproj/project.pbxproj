@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0DFCA56AD7DDD6678D63FAE0 /* Pods_StackOverflowUsers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B172E1552386F7D44BAEE7 /* Pods_StackOverflowUsers.framework */; };
+		2A4D60EF23586FCB001DB9E1 /* UsersDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4D60EE23586FCB001DB9E1 /* UsersDatabase.swift */; };
 		2AA063292343B0ED00A3EEDB /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA063282343B0ED00A3EEDB /* MockUser.swift */; };
 		2AA0632C2343B24200A3EEDB /* UserCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0632B2343B24200A3EEDB /* UserCellViewModelTests.swift */; };
 		2AA0632E2343B6CA00A3EEDB /* UsersListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0632D2343B6CA00A3EEDB /* UsersListViewModelTests.swift */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		0B86BC48C21185D060F10530 /* Pods-StackOverflowUsersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowUsersTests.debug.xcconfig"; path = "Target Support Files/Pods-StackOverflowUsersTests/Pods-StackOverflowUsersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		11B172E1552386F7D44BAEE7 /* Pods_StackOverflowUsers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackOverflowUsers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A4D60EE23586FCB001DB9E1 /* UsersDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDatabase.swift; sourceTree = "<group>"; };
 		2AA063282343B0ED00A3EEDB /* MockUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
 		2AA0632B2343B24200A3EEDB /* UserCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModelTests.swift; sourceTree = "<group>"; };
 		2AA0632D2343B6CA00A3EEDB /* UsersListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModelTests.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				2AA0632F2343BB3800A3EEDB /* API */,
 				2AD366EC23411E60001B1D7F /* FollowedUsersDatabase.swift */,
 				2AD366EE23411E6F001B1D7F /* BlockedUsersDatabase.swift */,
+				2A4D60EE23586FCB001DB9E1 /* UsersDatabase.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				2AD366DE23411465001B1D7F /* AppCoordinator.swift in Sources */,
 				2AD366E523411A94001B1D7F /* UserReporitoryProtocol.swift in Sources */,
 				2AFA369D234286B500FD2D4A /* SceneDelegate.swift in Sources */,
+				2A4D60EF23586FCB001DB9E1 /* UsersDatabase.swift in Sources */,
 				2AD366E3234118DD001B1D7F /* AppRepositories.swift in Sources */,
 				2AD366F7234139BF001B1D7F /* ViewControllersFactory.swift in Sources */,
 				2AD366F523413966001B1D7F /* MainFlowCoordinator.swift in Sources */,

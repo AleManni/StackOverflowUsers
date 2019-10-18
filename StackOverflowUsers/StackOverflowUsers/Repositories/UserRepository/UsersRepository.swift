@@ -17,13 +17,15 @@ final class UsersRepository: UsersRepositoryProtocol {
   let api: UsersAPIProtocol
   let followedUsersDatabase: FollowedUsersDatabaseProtocol
   let blockedUsersDatabase: BlockedUsersDatabaseProtocol
+  let usersDatabase: UsersDatabaseProtocol
   
   private lazy var apiUsers = [UserNetworkModel]()
   
-  init(api: UsersAPIProtocol, followedUsersDatabase: FollowedUsersDatabase, blockedUsersDatabase: BlockedUsersDatabaseProtocol) {
+  init(api: UsersAPIProtocol, followedUsersDatabase: FollowedUsersDatabase, blockedUsersDatabase: BlockedUsersDatabaseProtocol, usersDatabase: UsersDatabaseProtocol) {
     self.api = api
     self.followedUsersDatabase = followedUsersDatabase
     self.blockedUsersDatabase = blockedUsersDatabase
+    self.usersDatabase = usersDatabase
   }
   
   func getUsers(completion: @escaping (OperationResult<[User]>) -> Void) {
@@ -34,14 +36,22 @@ final class UsersRepository: UsersRepositoryProtocol {
       switch result {
       case let .success(apiUsersList):
         self.apiUsers = apiUsersList.users
-        let userModels = self.apiUsers.map {
-          return User(apiModel: $0,
-                      isFollowed: self.followedUsersDatabase.isUserFollowed($0.identifier),
-                      isBlocked: self.blockedUsersDatabase.isUserBlocked($0.identifier))
+        completion(.success(self.userModels(from: self.apiUsers)))
+        do {
+          try self.usersDatabase.saveUsers(apiUsersList)
+        } catch let error {
+          completion(.failure(error))
         }
-        completion(.success(userModels))
-      case let .failure(error):
-        completion(.failure(APIErrors.networkError(error)))
+        
+      case .failure(_):
+        let result = self.usersDatabase.retrieveUsers()
+        switch result {
+        case .success(let usersList):
+          self.apiUsers = usersList.users
+          completion(.success(self.userModels(from: self.apiUsers)))
+        case .failure(let error):
+          completion(.failure(error))
+        }
       }
     }
   }
@@ -68,6 +78,15 @@ final class UsersRepository: UsersRepositoryProtocol {
                          isBlocked: self.blockedUsersDatabase.isUserBlocked(user.identifier)))
     
   }
+  
+  private func userModels(from networkModels: [UserNetworkModel]) -> [User] {
+    return networkModels.map {
+      return User(apiModel: $0,
+                  isFollowed: self.followedUsersDatabase.isUserFollowed($0.identifier),
+                  isBlocked: self.blockedUsersDatabase.isUserBlocked($0.identifier))
+    }
+  }
+  
 }
 
 extension User {
